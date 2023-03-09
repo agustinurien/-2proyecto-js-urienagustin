@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background-color: rgb(207, 207, 207);
+}
+
+header {
+    background-color: rgb(203, 40, 40);
+    text-align: center;
+    color: beige;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.tituloPrincipal {
+    display: inline-block;
+    font-size: 70px;
+    font-weight: 100;
+    padding-top: 10px;
+    font-family: 'Climate Crisis', cursive;
+}
+
+h2{
+    padding-bottom: 5px;
+    color: black;
+}
+
+.estructura {
+    height: 100%;
+}
+
+.container {
+    background-color: beige;
+    margin: 10px 20px;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.container h3 {
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 30px;
+    font-weight: 900;
+    font-family: 'Climate Crisis', cursive;
+    font-weight: 100;
+}
+
+.container ul {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container li {
+    display: inline-block;
+}
+
+.container li button {
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 4px;
+    filter: drop-shadow(2px 0px 7px rgb(108, 103, 74));
+    background-color: white;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.container h4 {
+    display: inline-block;
+    padding: 8px;
+    font-family: 'Tilt Warp', cursive;
+}
+
+.zptllD {
+    background-image: url(../img/zapatilla\ deportiva.webp);
+}
+
+.zptllU {
+background-image: url(../img/zapatilla\ urbana.webp);
+}
+
+.sandalias {
+    background-image: url(../img/sandalia.webp);
+}
+
+.zptDv {
+    background-image: url(../img/zapatos\ dv.webp);
+}
+
+.chanclas {
+    background-image: url(../img/chanclas.jfif);
+}
+
+.tutor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 15%;
+}
+
+p {
+    display: inline-block;
+}
+
+.fondoFooter {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: beige;
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px 20px;
+}
+
+footer h3 {
+    padding: 5px;
+}
