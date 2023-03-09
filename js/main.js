@@ -2,8 +2,8 @@
 const listaNuevo = "Escoge un producto para conocer el precio \n" +
     "a - Zapatillas Deportivas \n" +
     "b - Zapatillas Urbanas \n" +
-    "a - Sandalias \n" +
-    "b - Zapatos de vestir \n" +
+    "c - Sandalias \n" +
+    "d - Zapatos de vestir \n" +
     "e - chanclas \n"
 
 
@@ -69,4 +69,28 @@ while (signup === true) {
     }
 }
 
+// let quiero = true
 
+//const listaProductos = "Escoge los productos que quieres \n" +
+//"a - Zapatillas Deportivas \n" +
+//    "b - Zapatillas Urbanas \n" +
+//   "a - Sandalias \n" +
+ //   "b - Zapatos de vestir \n" +
+ //   "e - chanclas \n"
+
+ //      let recibido = prompt(listaProductos).trim().toLowerCase()
+  //      if (typeof recibido === "a" && "b" && "c" && "d" && "e") {
+   //         let cuales = recibido
+   //         console.log("El usuario quiere estos productos")
+   //             return cuales
+   //     }else {
+   //         return 'no es una opcion correcta'
+  //      }
+  //  }
+
+  //  function quiereProductos() {
+  //      while(quiero) {
+   //         cuantosProductos()
+  //          quiero = confirm("quieres mas productos?")
+   //     }
+   // }
