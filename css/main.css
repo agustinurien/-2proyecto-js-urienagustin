@@ -124,6 +124,7 @@ background-image: url(../img/zapatilla\ urbana.webp);
 
 p {
     display: inline-block;
+    padding: 5px;
 }
 
 .fondoFooter {

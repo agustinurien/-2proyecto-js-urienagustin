@@ -1,55 +1,10 @@
-
-const listaNuevo = "Escoge un producto para conocer el precio \n" +
-    "a - Zapatillas Deportivas \n" +
-    "b - Zapatillas Urbanas \n" +
-    "c - Sandalias \n" +
-    "d - Zapatos de vestir \n" +
-    "e - chanclas \n"
-
-
-function eleccionProducto() {
-    let eleccion = prompt(listaNuevo) // .trim().toLowerCase() (si pongo el trim y lowercase, no me cuenta el null como opcion no valida)
-    if (eleccion !== "a" && eleccion !== "b" && eleccion !== "c" && eleccion !== "d" && eleccion !== "e" || eleccion === null) {
-        alert("no es una opcion valida")
-    } else {
-        switch (eleccion) {
-            case "a":
-                mensajeValor = "Zapatilla Dep. $45.000"
-                break
-            case "b":
-                mensajeValor = "Zapatilla Urbana $34000"
-                break
-            case "c":
-                mensajeValor = "Sandalias $30.000"
-                break
-            case "d":
-                mensajeValor = "Zapatos de vestir $69.900"
-                break
-            case "e":
-                mensajeValor = "Chanclas $15.000"
-                break
-            default:
-                console.error("No esta duncionando correctamente, algo salio mal")
-        }
-        alert(mensajeValor)
-    }
-}
-
-let consulta = true
-
-function consultarPrecio() {
-    while (consulta) {
-        eleccionProducto()
-        consulta = confirm("Quieres consultar el precio de algun producto?")
-    }
-}
-
+/*
 let signup = true
 let login = true
 
 while (signup === true) {
-    let usuario1 = prompt("Ingrese tu nombre de usuario").trim();
-    let contraseñaUsuario1 = prompt("Crea una contraseña").trim();
+    let usuario1 = prompt("Ingrese tu nombre de usuario").trim()
+    let contraseñaUsuario1 = prompt("Crea una contraseña").trim()
     if (usuario1.trim() === "" || contraseñaUsuario1.trim() === "") {
         alert("Create una cuenta para poder navegar")
     } else {
@@ -68,29 +23,71 @@ while (signup === true) {
         } while (login === true);
     }
 }
+*/
 
-// let quiero = true
+const productos = [
+    { nombre: "zapatillas deportivas", precio: 30000, codigo: 1 },
+    { nombre: "zapatillas urbanas", precio: 45000, codigo: 2 },
+    { nombre: "sandalias", precio: 50000, codigo: 3 },
+    { nombre: "zapatos de vestir", precio: 80000, codigo: 4 },
+    { nombre: "chanclas", precio: 12000, codigo: 5 }
+];
 
-//const listaProductos = "Escoge los productos que quieres \n" +
-//"a - Zapatillas Deportivas \n" +
-//    "b - Zapatillas Urbanas \n" +
-//   "a - Sandalias \n" +
- //   "b - Zapatos de vestir \n" +
- //   "e - chanclas \n"
 
- //      let recibido = prompt(listaProductos).trim().toLowerCase()
-  //      if (typeof recibido === "a" && "b" && "c" && "d" && "e") {
-   //         let cuales = recibido
-   //         console.log("El usuario quiere estos productos")
-   //             return cuales
-   //     }else {
-   //         return 'no es una opcion correcta'
-  //      }
-  //  }
+const mensajeElegir = "ESCOJA UN PRODUCTO \n" +
+    "Zapatillas Deportivas \n" +
+    "Zapatillas Urbanas \n" +
+    "Sandalias \n" +
+    "Zapatos de Vestir \n" +
+    "Chanclas \n"
 
-  //  function quiereProductos() {
-  //      while(quiero) {
-   //         cuantosProductos()
-  //          quiero = confirm("quieres mas productos?")
-   //     }
-   // }
+
+
+function consultarProductos() {
+    let eleccionU = prompt(mensajeElegir).trim().toLowerCase();
+    console.log(productos.filter((producto) => producto.nombre === eleccionU))
+    if (eleccionU.includes("zapatillas")) {
+        console.log(productos.filter((producto) => producto.nombre.includes("zapatillas")))
+    }
+}
+
+let terminoCompra = false
+const carrito = []
+
+function comprar() {
+    let encontrarProducto = true
+    do {
+        let agregar = prompt(mensajeElegir).trim().toLowerCase();
+
+        for (let i = 0; i < productos.length; i++) {
+            if (agregar === productos[i].nombre) {
+                carrito.push(productos[i]);
+                encontrarProducto = confirm("Desea agregar otro producto?")
+                break
+            }
+        }
+        if (agregar === "" || agregar === null) {
+            alert("no es un producto valido")
+            encontrarProducto = confirm("Desea agregar un producto?")
+        }
+    } while (encontrarProducto === true) {
+    }
+    console.log(carrito);
+    const descuento = calcularOff(carrito);
+    console.log(descuento);
+}
+
+function calcularOff(carrito) {
+    const total = carrito.reduce((ac, producto) => ac + producto.precio, 0);
+    if (total > 70000) {
+        const descuentoTotal = total * 0.5;
+        return alert("Al haber realizado una compra superior a $70.000 te hicimos un 50% de descuento! El total de tu compra es de: " + "$" + descuentoTotal);
+    } else {
+        return total
+    }
+
+}
+
+
+
+
