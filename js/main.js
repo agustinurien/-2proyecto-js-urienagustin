@@ -1,4 +1,4 @@
-/*
+
 let signup = true
 let login = true
 
@@ -23,7 +23,7 @@ while (signup === true) {
         } while (login === true);
     }
 }
-*/
+
 
 const productos = [
     { nombre: "zapatillas deportivas", precio: 30000, codigo: 1 },
