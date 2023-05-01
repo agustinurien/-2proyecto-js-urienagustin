@@ -19,7 +19,7 @@ body {
 }
 
 .modoOscuro {
-    background-color: rgb(52, 52, 52);
+    background-color: rgb(30, 30, 30);
 }
 
 header {
@@ -29,10 +29,13 @@ header {
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .navBar {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
     background-color: black;
     display: flex;
     justify-content: space-between;
@@ -54,23 +57,52 @@ header {
     padding-left: 7px;
 }
 
-#botonDark {
-    background-color: black;
-    border: none;
+.botonDark {
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    border: solid beige 1px;
+    border-radius: 5px;
     color: beige;
+}
+
+.botonLight {
+    padding: 5px;
+    background-color: beige;
+    border: solid rgb(0, 0, 0) 1px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
 }
 
 .tituloPrincipal {
     display: inline-block;
     font-size: 70px;
     font-weight: 100;
-    padding-top: 10px;
     font-family: 'Climate Crisis', cursive;
 }
 
-h2{
-    padding-bottom: 5px;
-    color: black;
+.seccionBuscar {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    background-color: rgb(195, 195, 174);
+    color: beige;
+}
+
+.barraBuscar {
+    width: 70%;
+    height: 25px;
+}
+
+.botonCarrito {
+    font-family: 'Climate Crisis', cursive;
+    color: white;
+    background-color: rgb(195, 195, 174);
+    border: none;
+    padding: 4px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px rgb(0, 0, 0);
 }
 
 .estructura {
@@ -79,15 +111,23 @@ h2{
 
 .container {
     background-color: beige;
-    margin: 10px 20px;
+    margin: 0px 20px 20px;
     padding: 20px;
     padding-bottom: 40px;
-    border-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     height: fit-content;
 }
 
+.containerDark {
+    background-color: #020202;
+}
+
+.productosNuevosD {
+    color: beige;
+}
+
 .container h3 {
-    text-align: center;
     font-size: 30px;
     padding-bottom: 30px;
     font-weight: 900;
@@ -103,6 +143,7 @@ h2{
     flex-wrap: wrap;
 }
 
+
 .container li {
     display: flex;
     flex-direction: column;
@@ -111,24 +152,58 @@ h2{
     margin: 10px;
 }
 
-.container li button {
-    width: 150px;
-    height: 150px;
+.img button {
+    width: 250px;
+    height: 250px;
     border: none;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    filter: drop-shadow(2px 0px 7px rgb(108, 103, 74));
     background-color: white;
     background-position-x: center;
     background-position-y: center;
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.container h4 {
+.info {
+    width: 100%;
+    color: beige;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 0px 3px beige;
+}
+
+.info h4 {
     text-align: center;
-    padding: 8px;
     font-family: 'Tilt Warp', cursive;
+}
+
+.info p {
+    text-align: center;
+    font-family: 'Tilt Warp', cursive;
+    margin-top: 3px;
+    margin-bottom: 4px;
+}
+
+.info button {
+    width: 100%;
+    background-color: beige;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    height: 25px;
+}
+
+.info button:hover {
+        background-color: #000000;
+        color: beige;
+        border: solid beige 0.5px;
+        cursor: pointer;
+    
 }
 
 .zptllD {
@@ -136,7 +211,7 @@ h2{
 }
 
 .zptllU {
-background-image: url(../img/zapatilla\ urbana.webp);
+    background-image: url(../img/zapatilla\ urbana.webp);
 }
 
 .sandalias {
@@ -151,35 +226,168 @@ background-image: url(../img/zapatilla\ urbana.webp);
     background-image: url(../img/chanclas.jfif);
 }
 
-
-#seccionCarrito {
-    height: 300px;
-    background-color:rgb(203, 40, 40);
-    margin: 10px 20px;
-    padding: 20px;
-    padding-bottom: 40px;
-    border-radius: 5px;
+.seccionTitulo {
+    color: beige;
+    background-color: rgb(203, 40, 40);
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
 }
 
 .tituloCarrito {
     font-size: 30px;
-    padding-bottom: 30px;
     font-weight: 900;
     font-family: 'Climate Crisis', cursive;
     font-weight: 100;
 }
 
-.tutor{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    height: 15%;
+
+.botonVolver {
+    font-family: 'Climate Crisis', cursive;
+    color: white;
+    background-color:rgb(203, 40, 40);
+    border: solid beige 0.5px;
+    padding: 4px;
+    border-radius: 5px;
 }
 
-p {
-    display: inline-block;
+.botonVolver a {
+    color: beige;
+}
+
+.fondoCarrito {
+    height: 100%;
+    background-color: beige;
+    margin: 0px 20px;
+}
+
+.tarjetaCarrito {
+    padding: 20px;
+}
+
+.datosTarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: rgb(218, 218, 192);
+    border-radius: 4px;
+    color: rgb(175, 35, 35);
+    font-family: 'Climate Crisis', cursive;
+
+}
+
+.nombre {
+    color: black;
+}
+
+.imagen {
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+}
+
+.eliminar {
+    color: white;
+    background-color:  rgb(203, 40, 40);
+    border: none;
+    padding: 4px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+
+.seccionCompra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: beige;
+    margin: 0px 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.bVaciar {
+    font-family: 'Konkhmer Sleokchher', cursive;
+    background-color: black;
+    color: beige;
+    margin-right: auto;
+    width: 100px;
+    height: 50px;
     padding: 5px;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+
+.bVaciar:hover {
+    background-color: beige;
+    color: black;
+    border: solid rgb(0, 0, 0) 0.5px;
+    cursor: pointer;
+
+}
+
+.junteCompra {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.total {
+    font-family: 'Konkhmer Sleokchher', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+    background-color: rgb(197, 70, 70);
+    margin-right: auto;
+    height: 50px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+
+
+.bComprar {
+    font-family: 'Konkhmer Sleokchher', cursive;
+    color: beige;
+    background-color: rgb(203, 40, 40);
+    margin-right: auto;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px rgb(0, 0, 0);
+}
+
+.bComprar:hover {
+    background-color: beige;
+    color:  rgb(203, 40, 40);
+    border: solid  rgb(203, 40, 40) 0.5px;
+    cursor: pointer;
+
+}
+
+.mensajeVacio {
+    font-size: 17px;
+    font-family: 'Climate Crisis', cursive;
+    font-weight: 100;
 }
 
 .fondoFooter {

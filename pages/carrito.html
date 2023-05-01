@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sneakers</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <title>Carrito</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -23,13 +24,13 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="./index.html">HOME</a>
+                        <a href="../index.html">HOME</a>
                     </li>
                     <li>
-                        <a href="./pages/signup.html">SIGN-UP</a>
+                        <a href="./signup.html">SIGN-UP</a>
                     </li>
                     <li>
-                        <a href="./pages/login.html">LOG-IN</a>
+                        <a href="./login.html">LOG-IN</a>
                     </li>
                 </ul>
             </nav>
@@ -39,33 +40,33 @@
         </div>
     </header>
 
+
     <main>
-        <div class="estructura">
-            <section class="seccionBuscar">
-                <input class="barraBuscar" type="search" placeholder="Buscar...">
-                <button class="botonCarrito">
-                    <a href="./pages/carrito.html">carrito</a>
+        <div class="seccionTitulo">
+            <h2 class="tituloCarrito">Carrito</h2>
+            <button class="botonVolver">
+                <a href="../index.html">Back</a>
+            </button>
+        </div>
+        <div class="fondoCarrito">
+
+        </div>
+        <div class="seccionCompra">
+            <button class="bVaciar">
+                vaciar
+            </button>
+            <div class="junteCompra">
+                <p class="total"></p>
+                <button class="bComprar">
+                    comprar
                 </button>
-            </section>
-            <div class="container">
-                <h3 class="productosNuevos">PRODUCTOS NUEVOS!</h3>
-                <ul class="contenedorProductos">
-
-                </ul>
             </div>
-
+        </div>
     </main>
 
-    <footer>
-        <section class="fondoFooter">
-            <div>
-                <h3>Agustin Urien</h3>
-                <h4>Coder House: comision #39470-javascript</h4>
-            </div>
-        </section>
-    </footer>
-    <script src="./js/main.js"></script>
-    <script src="./js/carrito.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
